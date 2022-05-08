@@ -31,8 +31,8 @@ declare type APIData = {
   greeting: string;
   about: string;
   quote: TQuote;
-  skills: any[];
-  experiences: any[];
+  skills: TSkill | TSkill[];
+  experiences: TExperience | TExperience[];
   projects: TProject | TProject[];
   social: TSocial;
 };
