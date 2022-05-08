@@ -1,6 +1,7 @@
 <script setup lang="ts">
-const useTheme = useColorMode();
 const { visible, lastScrollPos } = useHeaderVisible();
+const useTheme = useColorMode();
+const { data } = useStore();
 const menu = ref(false);
 
 function changeTheme() {
@@ -12,6 +13,9 @@ function changeTheme() {
     useTheme.preference = "light"
   }
 }
+
+const firstName = data.fullname.split(' ')[0].toUpperCase() || 'JOHN';
+const lastName = data.fullname.split(' ')[1].toUpperCase() || "DOE";
 </script>
 
 <template>
@@ -29,8 +33,8 @@ function changeTheme() {
     >
       <NuxtLink to="/">
         <div class="inline-flex text-xl">
-          <h1 class="tracking-wide font-extrabold select-none">KEVIN</h1> &nbsp;
-          <p class="tracking-wider select-none">SANDIHO</p>
+          <h1 class="tracking-wide font-extrabold select-none">{{firstName}}</h1> &nbsp;
+          <p class="tracking-wider select-none">{{lastName}}</p>
         </div>
       </NuxtLink>
 
@@ -89,3 +93,7 @@ function changeTheme() {
     </Container>
   </header>
 </template>
+
+<script lang="ts">
+export {}
+</script>
