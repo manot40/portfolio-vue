@@ -33,13 +33,13 @@ const useStore = defineStore("portfolio", {
       const res = await fetch(env.apiUrl + "/portofolio");
       try {
         if (res.status < 400) {
-          const error = { status: res.status, name: "BACKEND_ERROR" };
-          this.error = error;
-          return { error }
-        } else {
           const { data } = await res.json();
           this.data = data.attributes;
           return { data: data.attributes };
+        } else {
+          const error = { status: res.status, name: "BACKEND_ERROR" };
+          this.error = error;
+          return { error }
         }
       } catch {
         return {
