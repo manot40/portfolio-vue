@@ -37,7 +37,7 @@ const useStore = defineStore("portfolio", {
           this.data = data.attributes;
           return { data: data.attributes };
         } else {
-          const { error } = await res.json().catch(() => {});
+          const { error } = await res.json().catch(() => ({}));
           error.status ??= res.status;
           error.name ??= "BACKEND_ERROR";
           this.error = error;
