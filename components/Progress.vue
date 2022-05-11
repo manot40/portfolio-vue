@@ -9,7 +9,7 @@ const { name, value } = defineProps({
   <div class="font-sans">
     <div class="flex justify-between mb-1">
       <span class="font-semibold text-sm">{{name}}</span>
-      <span>{{value}}%</span>
+      <span></span>
     </div>
     <div class="w-full bg-gray-300 rounded-full h-0.5 dark:bg-gray-700">
       <div
