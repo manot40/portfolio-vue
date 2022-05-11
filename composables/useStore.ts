@@ -30,14 +30,14 @@ const useStore = defineStore("portfolio", {
   actions: {
     async fetchData() {
       const { public: env } = useRuntimeConfig();
-      const { data, error } = await fetch(env.apiUrl + "/portofolio")
-        .then((res) => res.json())
-        .then((res) => res);
+      const res = await fetch(env.apiUrl + "/portofolio");
       try {
-        if (error) {
+        if (res.status < 400) {
+          const error = { status: res.status, name: "BACKEND_ERROR" };
           this.error = error;
           return { error }
         } else {
+          const { data } = await res.json();
           this.data = data.attributes;
           return { data: data.attributes };
         }
@@ -45,7 +45,7 @@ const useStore = defineStore("portfolio", {
         return {
           error: {
             status: 500,
-            message: "InternalServerError"
+            name: "InternalServerError"
           }
         }
       }
