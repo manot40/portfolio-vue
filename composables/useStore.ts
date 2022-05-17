@@ -43,7 +43,10 @@ const useStore = defineStore("portfolio", {
           this.error = error;
           return { error }
         }
-      } catch {
+      } catch(e) {
+        console.warn(e.errno);
+        if(e.errno === "UNABLE_TO_VERIFY_LEAF_SIGNATURE")
+          return {};
         return {
           error: {
             status: 500,

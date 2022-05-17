@@ -41,7 +41,7 @@ const lastName = data.fullname.split(' ')[1].toUpperCase() || "DOE";
       <div class="flex items-center">
         <!-- Desktop Navigation -->
         <div class="font-medium font-display sm:block md:flex lg:flex space-x-8 hidden">
-            <a href="#about" class="transition-colors hover:text-blue-500" umami--click--aboutMenu>About</a>
+            <a href="#about" class="transition-colors hover:text-blue-500 umami--click--aboutMenu">About</a>
             <a href="#experience" class="transition-colors hover:text-blue-500 umami--click--experienceMenu">Experience</a>
             <a href="#project" class="transition-colors hover:text-blue-500 umami--click--projectMenu">Project</a>
         </div>
