@@ -32,9 +32,13 @@ export default defineNuxtConfig({
   },
   runtimeConfig: {
     public: {
+      // App Settings
       apiUrl: '',
       enforceApi: false,
-      // Portfolio data
+      // Umami Tracker
+      umamiId: '',
+      umamiUrl: '',
+      // Portfolio Data
       dataAvatar: '',
       dataFullname: '',
       dataNickname: '',
@@ -44,7 +48,7 @@ export default defineNuxtConfig({
       dataQuoteAuthor: '',
       dataSkills: [],
       dataExperiences: [],
-      // Social media data
+      // Social Media Data
       dataSocialGithub: '',
       dataSocialTwitter: '',
       dataSocialLinkedin: '',
