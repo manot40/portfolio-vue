@@ -41,16 +41,16 @@ const lastName = data.fullname.split(' ')[1].toUpperCase() || "DOE";
       <div class="flex items-center">
         <!-- Desktop Navigation -->
         <div class="font-medium font-display sm:block md:flex lg:flex space-x-8 hidden">
-            <a href="#about" class="transition-colors hover:text-blue-500">About</a>
-            <a href="#experience" class="transition-colors hover:text-blue-500">Experience</a>
-            <a href="#project" class="transition-colors hover:text-blue-500">Project</a>
+            <a href="#about" class="transition-colors hover:text-blue-500" umami--click--aboutMenu>About</a>
+            <a href="#experience" class="transition-colors hover:text-blue-500 umami--click--experienceMenu">Experience</a>
+            <a href="#project" class="transition-colors hover:text-blue-500 umami--click--projectMenu">Project</a>
         </div>
 
         <!-- Theme Toggler -->
         <button
           type="button"
           @click="changeTheme"
-          class="w-8 h-8 p-1 ml-1 mr-1 rounded sm:ml-4"
+          class="w-8 h-8 p-1 ml-1 mr-1 rounded sm:ml-4 umami--change--siteTheme"
         >
           <ion-icon
             :name="
@@ -78,13 +78,13 @@ const lastName = data.fullname.split(' ')[1].toUpperCase() || "DOE";
           >
             <nav @click="menu = !menu" class="flex flex-col space-y-4 items-center font-display text-xl font-semibold h-full mt-8">
               <div class="px-12 py-4">
-                <a href="#about" class="transition-colors hover:text-blue-500">About</a>
+                <a href="#about" class="transition-colors hover:text-blue-500 umami--click--aboutMenu">About</a>
               </div>
               <div class="px-12 py-4">
-                <a href="#experience" class="transition-colors hover:text-blue-500">Experience</a>
+                <a href="#experience" class="transition-colors hover:text-blue-500 umami--click--experienceMenu">Experience</a>
               </div>
               <div class="px-12 py-4">
-                <a href="#project" class="transition-colors hover:text-blue-500">Project</a>
+                <a href="#project" class="transition-colors hover:text-blue-500 umami--click--projectMenu">Project</a>
               </div>              
             </nav>
           </div>
