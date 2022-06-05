@@ -31,7 +31,7 @@ const useStore = defineStore("portfolio", {
     async fetchData() {
       const { public: env } = useRuntimeConfig();
       try {
-        const res = await fetch(env.apiUrl + "/portofolio");
+        const res = await fetch(env.apiUrl + "/portfolio");
         if (res.status < 400) {
           const { data } = await res.json();
           this.data = data.attributes;
