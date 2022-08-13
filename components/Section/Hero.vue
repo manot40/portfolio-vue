@@ -5,7 +5,7 @@ const { data } = useStore();
 <template>
   <section id="hero" class="bg-white-900 dark:bg-black-800 relative">
     <div class="heroImage" />
-    <Container class="md:px-8 pt-36 sm:pt-48 lg:pt-40 h-[40rem] lg:max-w-screen-lg" viewport="md">
+    <Container class="md:px-8 relative pt-36 sm:pt-48 lg:pt-40 h-[40rem] lg:max-w-screen-lg" viewport="md">
       <div class="md:space-x-5 md:flex md:flex-row item-center md:-mx-4 flex flex-col-reverse justify-between text-left">
         <div class="lg:mt-12 text-black-900 dark:text-white-700 max-w-xl">
           <h1 class="text-5xl md:text-6xl font-bold">
