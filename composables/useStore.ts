@@ -1,6 +1,6 @@
-import { defineStore } from "pinia";
+import { defineStore } from 'pinia';
 
-const useStore = defineStore("portfolio", {
+const useStore = defineStore('portfolio', {
   state: () => {
     const { public: env } = useRuntimeConfig();
     return {
@@ -25,13 +25,13 @@ const useStore = defineStore("portfolio", {
         // projects: [],
       },
       error: null,
-    }
+    };
   },
   actions: {
     async fetchData() {
       const { public: env } = useRuntimeConfig();
       try {
-        const res = await fetch(env.apiUrl + "/portfolio");
+        const res = await fetch(env.apiUrl + '/portfolio');
         if (res.status < 400) {
           const { data } = await res.json();
           this.data = data.attributes;
@@ -39,20 +39,19 @@ const useStore = defineStore("portfolio", {
         } else {
           const { error } = await res.json().catch(() => ({}));
           error.status ??= res.status;
-          error.name ??= "BACKEND_ERROR";
+          error.name ??= 'BACKEND_ERROR';
           this.error = error;
-          return { error }
+          return { error };
         }
-      } catch(e) {
+      } catch (e) {
         console.warn(e.errno);
-        if(e.errno === "UNABLE_TO_VERIFY_LEAF_SIGNATURE")
-          return {};
+        if (e.errno === 'UNABLE_TO_VERIFY_LEAF_SIGNATURE') return {};
         return {
           error: {
             status: 500,
-            name: "InternalServerError"
-          }
-        }
+            name: 'InternalServerError',
+          },
+        };
       }
     },
   },

@@ -1,16 +1,16 @@
 <script setup lang="ts">
-import { useMotion } from "@vueuse/motion";
+import { useMotion } from '@vueuse/motion';
 
 const el = ref();
 
 const { href, target } = defineProps({
   href: {
     type: String,
-    default: "#",
+    default: '#',
   },
   target: {
     type: String,
-    default: "_self",
+    default: '_self',
   },
 });
 
@@ -23,10 +23,10 @@ const { variant } = useMotion(el, {
     rotate: 10,
     scale: 1.2,
     transition: {
-      type: "spring",
+      type: 'spring',
       bounce: 0.8,
       bounceDamping: 1,
-      onComplete: () => (variant.value = "initial"),
+      onComplete: () => (variant.value = 'initial'),
     },
   },
 });
@@ -35,13 +35,7 @@ function clickAction() {}
 </script>
 
 <template>
-  <a
-    ref="el"
-    :href="href"
-    :target="target"
-    class="cursor-pointer"
-    @click="clickAction"
-  >
+  <a ref="el" :href="href" :target="target" rel="noopener noreferrer" class="cursor-pointer" @click="clickAction">
     <slot />
   </a>
 </template>

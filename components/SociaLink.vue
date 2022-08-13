@@ -20,5 +20,5 @@ const { data } = useStore();
 </template>
 
 <script lang="ts">
-export {}
+export {};
 </script>

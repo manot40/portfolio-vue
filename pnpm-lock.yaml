@@ -8,17 +8,21 @@ specifiers:
   '@vueuse/motion': ^2.0.0-beta.18
   nuxt: 3.0.0-rc.8
   pinia: ^2.0.18
+  prettier: ^2.7.1
+  typescript: ^4.7.4
 
 dependencies:
-  '@pinia/nuxt': 0.4.0_myrwoy3gzheufn2ryrr6izmfhi
+  '@pinia/nuxt': 0.4.0_oa2qzjnety7l6lrjymuz63kwoi
   '@vueuse/motion': 2.0.0-beta.18_bbuxsdvfj5ubg2jiua2zbxg7se
-  pinia: 2.0.18_vue@3.2.37
+  pinia: 2.0.18_j6bzmzd4ujpabbp5objtwxyjp4
 
 devDependencies:
   '@nuxt/kit': /@nuxt/kit-edge/3.0.0-rc.8-27673249.1b2304b_dlxoubnqpo3t3eauhrddop3apy
   '@nuxtjs/color-mode': 3.1.4_dlxoubnqpo3t3eauhrddop3apy
   '@nuxtjs/tailwindcss': 5.3.2_dlxoubnqpo3t3eauhrddop3apy
   nuxt: 3.0.0-rc.8_dlxoubnqpo3t3eauhrddop3apy
+  prettier: 2.7.1
+  typescript: 4.7.4
 
 packages:
 
@@ -759,11 +763,11 @@ packages:
       - webpack
     dev: true
 
-  /@pinia/nuxt/0.4.0_myrwoy3gzheufn2ryrr6izmfhi:
+  /@pinia/nuxt/0.4.0_oa2qzjnety7l6lrjymuz63kwoi:
     resolution: {integrity: sha512-gJ0qRJ5KhpFrYVs6qdqTWXPp9DAzbs9u74zJw5hyQO7tRiItRUYQxbWtWjGC3XUw5oO73xYrA8lYa5/GMW0uSg==}
     dependencies:
       '@nuxt/kit': 3.0.0-rc.6_dlxoubnqpo3t3eauhrddop3apy
-      pinia: 2.0.18_vue@3.2.37
+      pinia: 2.0.18_j6bzmzd4ujpabbp5objtwxyjp4
     transitivePeerDependencies:
       - '@vue/composition-api'
       - esbuild
@@ -4138,7 +4142,7 @@ packages:
     engines: {node: '>=0.10.0'}
     dev: true
 
-  /pinia/2.0.18_vue@3.2.37:
+  /pinia/2.0.18_j6bzmzd4ujpabbp5objtwxyjp4:
     resolution: {integrity: sha512-I5MW05UVX6a5Djka136oH3VzYFiZUgeOApBwFjMx6pL91eHtGVlE3adjNUKLgtwGnrxiBRuJ8+4R3LKJKwnyZg==}
     peerDependencies:
       '@vue/composition-api': ^1.4.0
@@ -4151,6 +4155,7 @@ packages:
         optional: true
     dependencies:
       '@vue/devtools-api': 6.2.1
+      typescript: 4.7.4
       vue: 3.2.37
       vue-demi: 0.13.7_vue@3.2.37
     dev: false
@@ -4640,6 +4645,12 @@ packages:
       nanoid: 3.3.4
       picocolors: 1.0.0
       source-map-js: 1.0.2
+
+  /prettier/2.7.1:
+    resolution: {integrity: sha512-ujppO+MkdPqoVINuDFDRLClm7D78qbDt0/NR+wp5FqEZOoTNAjPHWj17QRhu7geIHJfcNhRk1XVQmF8Bp3ye+g==}
+    engines: {node: '>=10.13.0'}
+    hasBin: true
+    dev: true
 
   /pretty-bytes/6.0.0:
     resolution: {integrity: sha512-6UqkYefdogmzqAZWzJ7laYeJnaXDy2/J+ZqiiMtS7t7OfpXWTlaeGMwX8U6EFvPV/YWWEKRkS8hKS4k60WHTOg==}
@@ -5334,6 +5345,11 @@ packages:
       media-typer: 0.3.0
       mime-types: 2.1.35
     dev: true
+
+  /typescript/4.7.4:
+    resolution: {integrity: sha512-C0WQT0gezHuw6AdY1M2jxUO83Rjf0HP7Sk1DtXj6j1EwkQNZrHAg2XPWlq62oqEhYvONq5pkC2Y9oPljWToLmQ==}
+    engines: {node: '>=4.2.0'}
+    hasBin: true
 
   /ufo/0.8.5:
     resolution: {integrity: sha512-e4+UtA5IRO+ha6hYklwj6r7BjiGMxS0O+UaSg9HbaTefg4kMkzj4tXzEBajRR+wkxf+golgAWKzLbytCUDMJAA==}
