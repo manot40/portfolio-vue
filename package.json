@@ -7,14 +7,15 @@
     "preview": "nuxt preview"
   },
   "devDependencies": {
-    "@nuxt/kit": "npm:@nuxt/kit-edge@3.0.0-rc.3-27581242.8831e4a",
-    "@nuxtjs/color-mode": "^3.0.2",
-    "@nuxtjs/tailwindcss": "^5.0.4",
-    "nuxt": "3.0.0-rc.2"
+    "@nuxt/kit": "npm:@nuxt/kit-edge@3.0.0-rc.8-27673249.1b2304b",
+    "@nuxtjs/color-mode": "^3.1.4",
+    "@nuxtjs/tailwindcss": "^5.3.2",
+    "nuxt": "3.0.0-rc.8"
   },
   "dependencies": {
-    "@pinia/nuxt": "^0.1.9",
+    "@pinia/nuxt": "^0.4.0",
     "@vueuse/motion": "^2.0.0-beta.18",
-    "pinia": "^2.0.14"
+    "pinia": "^2.0.18"
   }
 }
+
