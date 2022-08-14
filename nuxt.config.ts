@@ -34,6 +34,8 @@ export default defineNuxtConfig({
     public: {
       // App Settings
       apiUrl: '',
+      apiGithubUrl: '',
+      apiGithubImg: '',
       enforceApi: false,
       // Umami Tracker
       umamiId: '',

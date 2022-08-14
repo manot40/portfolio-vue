@@ -12,7 +12,7 @@ declare type TExperience = {
   title: string;
   description: string;
   date: string;
-  type: "job" | "education";
+  type: 'job' | 'education';
 };
 
 declare type TSocial = {
@@ -22,7 +22,12 @@ declare type TSocial = {
   whatsapp: string;
 };
 
-declare type TProject = {};
+declare type TProject = {
+  url: string;
+  name: string;
+  language: string;
+  description: string;
+};
 
 declare type APIData = {
   avatarUrl: string;
